@@ -1,0 +1,6 @@
+@Challenge5_PetAdoptionAPICThomason_HostAddress = http://localhost:5230
+
+GET {{Challenge5_PetAdoptionAPICThomason_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
