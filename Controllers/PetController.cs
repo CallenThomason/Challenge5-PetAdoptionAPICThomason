@@ -29,6 +29,10 @@ namespace Challenge5_PetAdoptionAPICThomason.Controllers
 
         public ActionResult<PetModel> FindById(int id)
         {
+            if(_pet.FindById(id) is null)
+            {
+                return NotFound($"A pet with id {id} was not found in our system");
+            }
             return Ok(_pet.FindById(id));
         }
 
