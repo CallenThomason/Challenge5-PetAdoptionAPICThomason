@@ -16,5 +16,6 @@ namespace Challenge5_PetAdoptionAPICThomason.Data
             //this is left empty
         }
         public DbSet<PetModel> pets{get; set;}
+        public DbSet<StaffModel> Staff{get; set;}
     }
 }

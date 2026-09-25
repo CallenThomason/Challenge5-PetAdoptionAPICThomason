@@ -2,6 +2,7 @@
 using Challenge5_PetAdoptionAPICThomason.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Challenge5_PetAdoptionAPICThomason.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260925175801_IsWorking")]
+    partial class IsWorking
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.12");
@@ -48,32 +51,10 @@ namespace Challenge5_PetAdoptionAPICThomason.Migrations
                     b.ToTable("pets");
                 });
 
-            modelBuilder.Entity("Challenge5_PetAdoptionAPICThomason.Models.StaffModel", b =>
+            modelBuilder.Entity("Challenge5_PetAdoptionAPICThomason.Models.Staff", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<bool>("IsWorking")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("JobPosition")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("Salary")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");

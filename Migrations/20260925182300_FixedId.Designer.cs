@@ -2,6 +2,7 @@
 using Challenge5_PetAdoptionAPICThomason.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Challenge5_PetAdoptionAPICThomason.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260925182300_FixedId")]
+    partial class FixedId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.12");
@@ -48,7 +51,7 @@ namespace Challenge5_PetAdoptionAPICThomason.Migrations
                     b.ToTable("pets");
                 });
 
-            modelBuilder.Entity("Challenge5_PetAdoptionAPICThomason.Models.StaffModel", b =>
+            modelBuilder.Entity("Challenge5_PetAdoptionAPICThomason.Models.Staff", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

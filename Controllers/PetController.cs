@@ -22,14 +22,14 @@ namespace Challenge5_PetAdoptionAPICThomason.Controllers
         [HttpGet("GetAllAvail")]
         public ActionResult<List<PetModel>> GetAll()
         {
-            return _pet.GetAllAvailable();
+            return Ok(_pet.GetAllAvailable());
         }
 
         [HttpGet("FindById/{id}")]
 
         public ActionResult<PetModel> FindById(int id)
         {
-            return _pet.FindById(id);
+            return Ok(_pet.FindById(id));
         }
 
         [HttpPost("addPet")]
@@ -43,15 +43,7 @@ namespace Challenge5_PetAdoptionAPICThomason.Controllers
                     createdPet
             );
         }
-        //      {
-        //     "Id" : 0,
-        //      "Name" : "Courage",
-        //      "Species" : "Dog",
-        //      "Breed" : "Beagle",
-        //     "Age" : 12,
-        //    "IsAdopted" : false,
-        //      "IsDeleted" : false
-        // }
+       
 
         [HttpPut("UpdateInfo/{id}")]
         public ActionResult<bool> UpdatePet(int id, PetModel pet)
@@ -64,7 +56,7 @@ namespace Challenge5_PetAdoptionAPICThomason.Controllers
             return NoContent(); //returns 204 no content
         }//end of updatePet
 
-        [HttpPut("AdoptPet/{id}")]
+        [HttpPatch("AdoptPet/{id}")]
         public ActionResult<bool> AdoptPet(int id)
         {
             bool update = _pet.AdoptPet(id);
@@ -76,7 +68,7 @@ namespace Challenge5_PetAdoptionAPICThomason.Controllers
         }//end of AdoptPet
 
 
-        [HttpPut("RemovePet/{id}")]
+        [HttpDelete("RemovePet/{id}")]
         public ActionResult<bool> RemovePet(int id)
         {
             bool update = _pet.RemovePet(id);
@@ -86,7 +78,7 @@ namespace Challenge5_PetAdoptionAPICThomason.Controllers
             }
             return NoContent(); //returns 204 no content
         }
-         [HttpPut("RestorePet/{id}")]
+         [HttpPatch("RestorePet/{id}")]
         public ActionResult<bool> RestorePet(int id)
         {
             bool update = _pet.RestorePet(id);

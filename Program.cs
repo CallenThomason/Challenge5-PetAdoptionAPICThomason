@@ -16,6 +16,8 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite(builder
 //responsible for connecting our interface/controller to our services
 builder.Services.AddScoped<IPetService, PetService>(); 
 
+builder.Services.AddScoped<IStaffServices, StaffServices>(); 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

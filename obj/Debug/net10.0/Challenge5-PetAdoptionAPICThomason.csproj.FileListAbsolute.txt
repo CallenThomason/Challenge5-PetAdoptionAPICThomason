@@ -145,3 +145,4 @@ C:\Users\calle\OneDrive\Desktop\CSA Combine\Homework\Challenge5-PetAdoptionAPICT
 C:\Users\calle\OneDrive\Desktop\CSA Combine\Homework\Challenge5-PetAdoptionAPICThomason\obj\Debug\net10.0\Challenge5-PetAdoptionAPICThomason.pdb
 C:\Users\calle\OneDrive\Desktop\CSA Combine\Homework\Challenge5-PetAdoptionAPICThomason\obj\Debug\net10.0\Challenge5-PetAdoptionAPICThomason.genruntimeconfig.cache
 C:\Users\calle\OneDrive\Desktop\CSA Combine\Homework\Challenge5-PetAdoptionAPICThomason\obj\Debug\net10.0\ref\Challenge5-PetAdoptionAPICThomason.dll
+C:\Users\calle\OneDrive\Desktop\CSA Combine\Homework\Challenge5-PetAdoptionAPICThomason\obj\Debug\net10.0\Challenge5-PetAdoptionAPICThomason.sourcelink.json
